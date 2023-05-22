@@ -1,0 +1,13 @@
+version: '3.8'
+
+services: 
+  gpt4all-webui:
+    image: localagi/gpt4all-ui:${GPT4ALL_UI_VERSION:-main}
+    volumes:
+      - ./data:/srv/data
+      - ./data/.nomic:/root/.nomic/
+      - ${LOCAL_MODEL_DIR:-./models}:/srv/models
+      - ./configs:/srv/configs
+      - ./personalities:/srv/personalities
+    ports: 
+      - "9600:9600"
