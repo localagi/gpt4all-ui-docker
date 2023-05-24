@@ -1,7 +1,6 @@
 name: Publish Docker images
 
 on:
-  push:
   release:
     types: [published]
   workflow_dispatch:
@@ -13,10 +12,9 @@ permissions:
 jobs:
     
   build-gpt4all:
-    uses: localagi/ai-dedicated-workflows/.github/workflows/operation-docker-build-publish.yml@v2
+    uses: localagi/ai-dedicated-workflows/.github/workflows/operation-docker-build-publish.yml@v3
     with:
       registry-repo-name: gpt4all-ui
-      registry-readme: README.docker.md
       dockerfile: https://raw.githubusercontent.com/nomic-ai/gpt4all-ui/${{ github.ref }}/Dockerfile
       context: https://github.com/nomic-ai/gpt4all-ui.git#${{ github.ref }}
       tags: |
