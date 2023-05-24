@@ -13,7 +13,7 @@ Easy setup. Compatible. Tweakable. Scaleable.
  
 Containers follow the version scheme of the parent project
 
-`main` (default), `0.0.9`,  etc.
+`main` (default), `v0.0.9`,  etc.
 
 See [Releases](../../releases)
 
@@ -40,7 +40,7 @@ make sure you have a config
 Environment variables to set for the specific service
 
 #### version selection `GPT4ALL_UI_VERSION`
-Prepend, e.g. `GPT4ALL_UI_VERSION=0.0.9`
+Prepend, e.g. `GPT4ALL_UI_VERSION=v0.0.9`
 
 
 ### Get the latest builds / update
